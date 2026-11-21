@@ -37,7 +37,7 @@ button, select, input { font: inherit; color: inherit; }
   gap: 28px;
   justify-content: space-between;
   align-items: stretch;
-  padding: 7px 28px 6px;
+  padding: 5px 28px 4px;
   border-bottom: 3px solid var(--pink);
   background: linear-gradient(100deg, rgba(255,46,136,.16), rgba(34,211,238,.10) 60%, transparent);
 }
@@ -67,7 +67,7 @@ button, select, input { font: inherit; color: inherit; }
   flex-wrap: wrap;
   gap: 6px 10px;
   align-items: center;
-  padding: 3px 28px;
+  padding: 2px 28px;
   background: #12081f;
   border-bottom: 1px solid var(--line);
   font-size: 13px;
@@ -78,7 +78,7 @@ button, select, input { font: inherit; color: inherit; }
 .audit-sep { color: var(--muted); }
 
 /* Tabs */
-.tabs { display: flex; gap: 8px; padding: 4px 28px 0; flex-wrap: wrap; }
+.tabs { display: flex; gap: 8px; padding: 3px 28px 0; flex-wrap: wrap; }
 .tab {
   background: var(--card);
   border: 1px solid var(--line);
@@ -97,7 +97,7 @@ button, select, input { font: inherit; color: inherit; }
   flex-wrap: wrap;
   gap: 10px;
   align-items: center;
-  padding: 8px 28px 4px;
+  padding: 6px 28px 3px;
 }
 .controls label { font-size: 13px; color: var(--muted); font-weight: 600; display: flex; gap: 6px; align-items: center; }
 .controls select, .controls input[type="search"] {
@@ -123,7 +123,7 @@ button, select, input { font: inherit; color: inherit; }
 .import-btn { background: var(--card2); border: 1px solid var(--line); color: var(--text); }
 .import-btn input { display: none; }
 .spoiler-toggle { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 7px 10px; color: var(--text) !important; }
-.chips { display: flex; flex-wrap: nowrap; gap: 6px; padding: 2px 28px 0; overflow-x: auto; scrollbar-width: none; }
+.chips { display: flex; flex-wrap: nowrap; gap: 6px; padding: 1px 28px 0; overflow-x: auto; scrollbar-width: none; }
 .chips::-webkit-scrollbar { display: none; }
 .chip {
   background: var(--card);
@@ -138,10 +138,10 @@ button, select, input { font: inherit; color: inherit; }
   flex-shrink: 0;
 }
 .chip.active { background: var(--pink); border-color: var(--pink); color: #fff; }
-.filter-note { padding: 0 28px; margin: 2px 0 0; color: var(--muted); font-size: 13px; min-height: 15px; }
+.filter-note { padding: 0 28px; margin: 1px 0 0; color: var(--muted); font-size: 13px; min-height: 15px; }
 
 /* Next up */
-.next-up { padding: 2px 28px 0; display: flex; gap: 10px; align-items: center; }
+.next-up { padding: 1px 28px 0; display: flex; gap: 10px; align-items: center; }
 .next-label { font-size: 13px; text-transform: uppercase; letter-spacing: .08em; color: var(--cyan); font-weight: 700; white-space: nowrap; }
 .next-list { list-style: none; display: flex; gap: 8px; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin: 0; padding: 0; }
 .next-list::-webkit-scrollbar { display: none; }
@@ -159,7 +159,7 @@ button, select, input { font: inherit; color: inherit; }
 .next-stage { color: var(--cyan); font-weight: 800; }
 
 /* Two-column layout: checklist + guide detail */
-.layout { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 18px; padding: 2px 28px 16px; align-items: start; }
+.layout { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 18px; padding: 1px 28px 16px; align-items: start; }
 .list-col h2, .detail-col h2 { font-size: 18px; margin: 6px 0 10px; }
 .list-col h2 span { color: var(--muted); font-size: 14px; font-weight: 400; }
 .trophy-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
@@ -197,31 +197,38 @@ button, select, input { font: inherit; color: inherit; }
 
 /* Detail panel */
 .detail-col { position: sticky; top: 12px; }
-.detail { background: var(--card); border: 1px solid var(--pink); border-radius: 12px; padding: 9px 13px; }
+.detail { background: var(--card); border: 1px solid var(--pink); border-radius: 12px; padding: 7px 13px; }
 .detail-empty { color: var(--muted); }
 .detail h2 { font-size: 18px; margin: 1px 0 3px; }
-.detail .official { color: var(--muted); font-size: 14px; margin: 0 0 3px; }
+.detail .official { color: var(--muted); font-size: 14px; margin: 0 0 2px; }
 .detail .official strong { color: var(--text); }
-.detail h3 { font-size: 13px; text-transform: uppercase; letter-spacing: .08em; color: var(--cyan); margin: 4px 0 1px; }
+.detail h3 { font-size: 13px; text-transform: uppercase; letter-spacing: .08em; color: var(--cyan); margin: 3px 0 1px; }
 .detail p { margin: 3px 0; }
 .detail .guide-text { font-size: 15px; }
 .detail .sources { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0 14px; }
 .detail .sources li { margin: 1px 0; font-size: 12.5px; }
 .detail .sources a { overflow-wrap: anywhere; }
 .claim-count { color: var(--muted); font-size: 13px; }
-.detail .risk-box { border-radius: 8px; padding: 4px 9px; font-size: 12.5px; line-height: 1.3; margin: 6px 0; }
+.detail .risk-box { border-radius: 8px; padding: 3px 9px; font-size: 12px; line-height: 1.25; margin: 4px 0; }
 .detail .risk-box.missable { background: #2a0e1e; border: 1px solid var(--pink); }
 .detail .risk-box.watch { background: #241a05; border: 1px solid var(--amber); }
+.detail .risk-box p { margin: 2px 0; }
+/* In-panel dispute note: where the sources disagree about this trophy, both
+   versions are shown here in the detail panel, not only on the Disputes tab. */
+.detail .dispute-note { background: #241a05; border: 1px solid var(--amber); border-radius: 8px; padding: 3px 9px; font-size: 12.5px; line-height: 1.3; margin: 4px 0; }
+.detail .dispute-note p { margin: 0; }
+.detail .dispute-note-lead { font-weight: 800; color: var(--amber); }
+.detail .dispute-note-body strong { color: var(--green); }
 .detail .risk-title { font-weight: 800; margin: 0 0 3px !important; }
 .detail .risk-box.missable .risk-title { color: var(--pink); }
 .detail .risk-box.watch .risk-title { color: var(--amber); }
 .detail .risk-src { color: var(--muted); font-size: 13px; }
 .detail .unconfirmed { background: #241a05; border: 1px solid var(--amber); border-radius: 8px; padding: 6px 9px; font-size: 14px; margin: 6px 0; }
-.detail .tick-row { margin-top: 6px; }
-.detail .tick-row button { background: var(--green); color: #06281a; border: 0; border-radius: 8px; padding: 7px 12px; font-weight: 800; cursor: pointer; }
+.detail .tick-row { margin-top: 4px; }
+.detail .tick-row button { background: var(--green); color: #06281a; border: 0; border-radius: 8px; padding: 6px 12px; font-weight: 800; cursor: pointer; }
 .detail .tick-row button.earned { background: transparent; border: 1px solid var(--green); color: var(--green); }
-.steps { margin: 3px 0 2px; padding-left: 22px; }
-.steps li { margin: 0; font-size: 12px; line-height: 1.25; }
+.steps { margin: 2px 0 1px; padding-left: 22px; }
+.steps li { margin: 0; font-size: 11.5px; line-height: 1.15; }
 .steps .ref { color: var(--cyan); font-weight: 700; font-size: 13px; white-space: nowrap; }
 .notes { margin-top: 6px; border-top: 1px solid var(--line); padding-top: 4px; }
 .notes summary { cursor: pointer; color: var(--cyan); font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; }
@@ -232,8 +239,8 @@ button, select, input { font: inherit; color: inherit; }
   background: var(--bg2);
   border: 1px solid var(--line);
   border-radius: 8px;
-  padding: 5px 9px;
-  margin: 3px 0;
+  padding: 3px 9px;
+  margin: 2px 0;
   flex-wrap: wrap;
 }
 .count-label { font-weight: 800; font-size: 13px; letter-spacing: .06em; color: var(--green); }
@@ -242,7 +249,7 @@ button, select, input { font: inherit; color: inherit; }
   border: 1px solid var(--line);
   border-radius: 6px;
   width: 28px;
-  height: 28px;
+  height: 24px;
   font-size: 16px;
   font-weight: 800;
   cursor: pointer;

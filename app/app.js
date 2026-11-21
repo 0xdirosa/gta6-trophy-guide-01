@@ -324,6 +324,33 @@ function renderDetailInto(root) {
     warn.append(el('p', null, 'Protect yourself: ' + t.risk.protect + ' [' + t.risk.src + ']'));
     box.append(warn);
   }
+  // In-panel dispute notes: where the sources disagree about this trophy,
+  // show both versions here (not only on the Disputes tab). d-balcony gets a
+  // one-line summary of the same dispute (same facts, fewer words); other
+  // disputes render in full.
+  const DISPUTE_SHORT = {
+    'd-balcony': {
+      a: 'PowerPyx: the balcony raises the counter +1, but may not count as one of the 18.',
+      b: 'KeenGamer: the balcony is a separate first step, not one of the 18.',
+      call: 'Do the balcony in Chapter 1 anyway.',
+    },
+  };
+  for (const d of doc.disputes.filter((x) => x.trophies.includes(t.id))) {
+    const s = DISPUTE_SHORT[d.id];
+    const note = el('div', 'dispute-note');
+    const body = el('p', 'dispute-note-body');
+    body.append(el('span', 'dispute-note-lead', '⚠ SOURCES DIFFER — ' + (s ? '' : d.topic + ': ')));
+    if (s) {
+      body.append(document.createTextNode(s.a + ' ' + s.b + ' '));
+      body.append(el('strong', null, 'Our call: ' + s.call));
+    } else {
+      body.append(document.createTextNode('A — ' + d.a.src + ': ' + d.a.claim + ' '));
+      body.append(document.createTextNode('B — ' + d.b.src + ': ' + d.b.claim + ' '));
+      body.append(el('strong', null, 'Our call: ' + d.call));
+    }
+    note.append(body);
+    box.append(note);
+  }
   if (t.steps && t.steps.length) {
     box.append(el('h3', null, 'How to get it — cited steps'));
     const ol = el('ol', 'steps');
