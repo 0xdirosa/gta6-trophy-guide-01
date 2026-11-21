@@ -516,7 +516,7 @@ function renderMissables() {
   }
   root.append(gates);
   const unc = trophies.filter((t) => t.unconfirmed);
-  const note = el('p', 'miss-note', unc.length + ' trophies have an unconfirmed trigger at launch (' + unc.map((t) => t.name).join(', ') + '). They are flagged Unconfirmed in the tracker, not guessed at.');
+  const note = el('p', 'miss-note', unc.length + (unc.length === 1 ? ' trophy has' : ' trophies have') + ' an unconfirmed trigger at launch (' + unc.map((t) => t.name).join(', ') + '). ' + (unc.length === 1 ? 'It is' : 'They are') + ' flagged Unconfirmed in the tracker, not guessed at.');
   root.append(note);
   $('filter-note').textContent = 'Missable data comes from the cited guides — PowerPyx flags the one missable meditation; the watch list is this guide’s own read of the same sources.';
 }

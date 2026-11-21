@@ -1,5 +1,5 @@
-// Leonida Platinum (this entry, v4): the guide is a rewritten app/ — a dark neon
-// checklist + detail panel with 209 cited steps across 50 of the 55 trophies,
+// Leonida Platinum (this entry, v6): the guide is a rewritten app/ — a dark neon
+// checklist + detail panel with 240 cited steps across all 55 trophies,
 // per-trophy counters, a chapter-keyed 7-stage platinum roadmap, a missables
 // system with story gates, and a sources/disputes audit — over the same
 // plumbing below, which copies app/ and screenshots/ to /output. The detail
