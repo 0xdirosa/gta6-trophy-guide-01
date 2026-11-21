@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Leonida Platinum — GTA VI Trophy Guide &amp; Tracker</title>
-<meta name="description" content="Offline guide and tracker for all 55 PlayStation 5 trophies of Grand Theft Auto VI: official names, descriptions and grades, a guide to each trophy with cited sources, a roadmap to the platinum, and a saved checklist.">
+<meta name="description" content="Offline guide and tracker for all 55 PlayStation 5 trophies of Grand Theft Auto VI: 72 cited steps, a chapter roadmap, missable flags, and a checklist that saves in your browser.">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,32 +12,22 @@
   <div>
     <p class="eyebrow">Grand Theft Auto VI &middot; PlayStation 5 &middot; Offline guide</p>
     <h1>Leonida Platinum</h1>
-    <p class="tagline">The best guide and tracker for all <strong>55 trophies</strong> — every official name, description and grade, a guide in our own words with its sources, and a checklist that saves in your browser.</p>
+    <p class="tagline"><strong>55 trophies</strong> &middot; <strong>72 cited steps</strong> &middot; <strong>1 missable</strong> &middot; <strong>200&ndash;300 h</strong></p>
   </div>
   <div class="progress-card" id="progress-card" aria-live="polite">
     <div class="big-progress"><span id="pct">0%</span><span class="big-count" id="count">0 / 55</span></div>
     <div class="bar" role="progressbar" aria-label="Trophies earned" aria-valuemin="0" aria-valuemax="55" aria-valuenow="0" id="bar"><div id="bar-fill"></div></div>
     <p class="progress-note" id="progress-note">Tick a trophy to start your run to the platinum.</p>
-    <ul class="grade-chips" id="grade-chips"></ul>
+    <p class="saved-note">&#10003; Saved in this browser</p>
   </div>
 </header>
 
-<section class="controls" aria-label="Tracker controls">
+<section class="audit" id="audit-strip" aria-label="Guide audit"></section>
+
+<nav class="tabs" id="view-tabs" aria-label="Guide views"></nav>
+
+<section class="controls" id="controls" aria-label="Tracker controls">
   <label class="search">Search <input id="q" type="search" placeholder="Trophy, mission or place…" autocomplete="off"></label>
-  <label>Kind
-    <select id="kind">
-      <option value="all">All kinds</option>
-      <option value="story">Story</option>
-      <option value="missable">★ Missable</option>
-      <option value="side">Side quests</option>
-      <option value="activities">Activities</option>
-      <option value="collectibles">Collectibles</option>
-      <option value="crime">Crime</option>
-      <option value="money">Money &amp; property</option>
-      <option value="completion">Completion</option>
-      <option value="oddities">Odd one-offs</option>
-    </select>
-  </label>
   <label>Grade
     <select id="grade">
       <option value="all">All grades</option>
@@ -47,58 +37,20 @@
       <option value="bronze">Bronze</option>
     </select>
   </label>
-  <label>Show
-    <select id="earned-filter">
-      <option value="all">All trophies</option>
-      <option value="earned">Earned only</option>
-      <option value="missing">Not earned yet</option>
-    </select>
-  </label>
   <label class="spoiler-toggle"><input id="spoiler" type="checkbox"> Hide story spoilers</label>
   <span class="spacer"></span>
   <button id="export" type="button">Export progress</button>
   <label class="import-btn">Import progress <input id="import" type="file" accept="application/json,.json"></label>
   <button id="reset" type="button" class="danger">Reset</button>
 </section>
+<div class="chips" id="chips" aria-label="Filter by category"></div>
 <p class="filter-note" id="filter-note"></p>
 
-<main class="layout">
-  <section class="list-col" aria-label="Trophy checklist">
-    <h2 id="list-heading">Checklist <span id="shown-count"></span></h2>
-    <ul class="trophy-list" id="list"></ul>
-  </section>
-  <aside class="detail-col" aria-label="Selected trophy guide">
-    <div class="detail" id="detail">
-      <p class="detail-empty">Select a trophy to read its guide and sources.</p>
-    </div>
-  </aside>
-</main>
-
-<section class="roadmap" id="roadmap" aria-label="Roadmap to the platinum">
-  <h2>Roadmap to the platinum <span class="roadmap-meta">~200 hours &middot; difficulty 4/10 &middot; 1 playthrough &middot; 0 online trophies</span></h2>
-  <ol class="stages">
-    <li>
-      <h3>Stage 1 — Story &amp; side missions <span>60–80 h</span></h3>
-      <p>Play the 5 chapters and answer every side call: purple icons and black icons with pink letters. Scan each new vehicle with WAiNK and study animals through binoculars as you go — 100% needs 200 of 277 vehicle models and 100 of 255 animals, and everything counts before the ending.</p>
-      <p class="warn">⚠ Do the balcony meditation with Lucia at Jason&rsquo;s house in Chapter 1 — the one possibly missable trophy. Keep a manual save at the start and end of every chapter: there is no mission replay.</p>
-    </li>
-    <li>
-      <h3>Stage 2 — 100% checklist &amp; Challenges <span>~100 h</span></h3>
-      <p>After the ending, open <strong>Progress &gt; Stats &gt; 100% Completion</strong>. It is closer to 60% true completion: most side quests are not required and only 70 of the 80 Challenges are needed. What it demands in full: every robbery, underwater discovery, shooting range, drone race and Bret quest.</p>
-      <p class="warn">⚠ Cheats disable trophies and saving — keep them off this save.</p>
-    </li>
-    <li>
-      <h3>Stage 3 — Strangers &amp; cleanup <span>~10 h</span></h3>
-      <p>Finish the Strangers &amp; Freaks strands the checklist does not ask for (8 of 14), then mop up whatever is left: the contact finales, the money trophies and the odd one-offs. Every quest giver tied to a trophy is still around in free roam after the ending.</p>
-      <p class="warn">⚠ Avoid the Irredeemable criminal profile — it is permanent and makes the police more aggressive.</p>
-    </li>
-  </ol>
-  <p class="missable-banner" id="missable-banner">★ <strong>1 possibly missable trophy:</strong> Positive Mental Attitude — meditate at every spot, starting with the Chapter 1 balcony. Everything else can be finished in free roam after the story.</p>
-</section>
+<main id="view-root"></main>
 
 <footer>
   <p>Official trophy names, descriptions and grades are shown as PlayStation publishes them (list of 2026-11-18; 28 of the 55 are hidden on PlayStation until earned). Every guide is written for this page in our own words and cites its sources beside it — sources are cited, never copied. This app works fully offline: it loads only its own files and stores your progress in this browser only.</p>
-  <p class="sources-line">Guide sources: PowerPyx, Push Square, GameMapa, KeenGamer — linked beside each trophy.</p>
+  <p class="sources-line" id="sources-line"></p>
 </footer>
 <script type="module" src="app.js"></script>
 </body>

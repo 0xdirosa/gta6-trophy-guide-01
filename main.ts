@@ -1,7 +1,8 @@
 // Leonida Platinum (this entry): the guide is a rewritten app/ — a dark neon
-// checklist + detail panel with a 3-stage platinum roadmap, missable flag,
-// kind/grade/earned filters, text search, spoiler hiding and export/import —
-// over the same plumbing below, which copies app/ and screenshots/ to /output.
+// checklist + detail panel with cited steps per trophy, per-trophy counters,
+// a chapter-keyed 7-stage platinum roadmap, a missables system with story
+// gates, and a sources/disputes audit — over the same plumbing below, which
+// copies app/ and screenshots/ to /output.
 // A working gta6-trophy-guide-01 entry (Node 22, standard library only): the guide is this directory's app/ folder,
 // plain static files a browser opens at app/index.html (ES modules, CSS, no build step), offline: it loads nothing
 // over the network, and its trophy list and guides are app/data/trophies.json. The program hands it in: it copies app/
