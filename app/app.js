@@ -308,6 +308,14 @@ function renderDetailInto(root) {
   off.append(el('span', 'badge ' + t.grade, t.grade));
   box.append(off);
   box.append(el('p', 'official', (KIND_LABELS[t.kind] ?? t.kind) + ' · ' + (t.chapter || 'Free roam') + ' · Stage ' + (t.stage || '—') + (t.target ? ' · ' + t.target : '')));
+  const row = el('div', 'tick-row');
+  const btn = document.createElement('button');
+  btn.type = 'button';
+  btn.textContent = earned.has(t.id) ? '✓ Earned — click to untick' : 'Mark as earned';
+  btn.className = earned.has(t.id) ? 'earned' : '';
+  btn.addEventListener('click', () => toggleEarned(t.id));
+  row.append(btn);
+  box.append(row);
   if (t.risk) {
     const warn = el('div', 'risk-box ' + t.risk.status);
     warn.append(el('p', 'risk-title', t.risk.status === 'missable' ? '★ POSSIBLY MISSABLE' : '⚠ WATCH — easy to get wrong'));
@@ -368,14 +376,6 @@ function renderDetailInto(root) {
     det.append(el('p', 'guide-text', t.guide));
     box.append(det);
   }
-  const row = el('div', 'tick-row');
-  const btn = document.createElement('button');
-  btn.type = 'button';
-  btn.textContent = earned.has(t.id) ? '✓ Earned — click to untick' : 'Mark as earned';
-  btn.className = earned.has(t.id) ? 'earned' : '';
-  btn.addEventListener('click', () => toggleEarned(t.id));
-  row.append(btn);
-  box.append(row);
   aside.append(box);
   root.append(aside);
 }
@@ -418,7 +418,6 @@ function renderRoadmap() {
       b.className = earned.has(id) ? 'earned' : '';
       b.addEventListener('click', () => { selectedId = id; view = 'tracker'; syncUrl(); renderAll(); });
       b.append(document.createTextNode((earned.has(id) ? '✓ ' : '') + t.name));
-      b.append(el('span', 'badge ' + t.grade, t.grade));
       li.append(b);
       ul.append(li);
     }
